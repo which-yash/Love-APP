@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Choose a sub-option</h1>
+  <div class="card">
+    {% if choice == 'icecream' %}
+      <a href="/date/result/icecream/chocolate"><button class="btn">Chocolate 🍫</button></a>
+      <a href="/date/result/icecream/vanilla"><button class="btn">Vanilla 🍨</button></a>
+      <a href="/date/result/icecream/strawberry"><button class="btn">Strawberry 🍓</button></a>
+    {% elif choice == 'movie' %}
+      <a href="/date/result/movie/romantic"><button class="btn">Romantic ❤️</button></a>
+      <a href="/date/result/movie/comedy"><button class="btn">Comedy 😂</button></a>
+      <a href="/date/result/movie/horror"><button class="btn">Horror 👻</button></a>
+    {% elif choice == 'stars' %}
+      <a href="/date/result/stars/stargaze"><button class="btn">Stargazing 🌌</button></a>
+      <a href="/date/result/stars/wish"><button class="btn">Make a wish 🌠</button></a>
+      <a href="/date/result/stars/hands"><button class="btn">Hold hands 🤝</button></a>
+    {% else %}
+      <p>Unknown choice</p>
+    {% endif %}
+    <a href="/date"><button class="btn small">Back</button></a>
+  </div>
+{% endblock %}
